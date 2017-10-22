@@ -12,6 +12,7 @@ void security_loop()
         return;
     }
 
+    // polling every 100ms
     while(1){
         int distance;
         ret = read_distance(&distance);

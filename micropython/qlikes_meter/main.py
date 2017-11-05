@@ -180,7 +180,7 @@ def update_likes_led():
     set_led_level(int(rate))   
     
     if (likes_count > prev_likes_count) and (prev_likes_count > 0) :
-        set_arrival_led_on()
+        set_arrivals_led_on()
 
     prev_likes_count = likes_count
 

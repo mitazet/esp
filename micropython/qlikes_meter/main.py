@@ -1,5 +1,5 @@
-SSID_NAME = "set_your_ssid_name"
-SSID_PASS = "set_your_ssid_pass"
+SSID_NAME = "set_your_ssid"
+SSID_PASS = "set_your_pass"
 
 import utime
 import network
@@ -117,7 +117,7 @@ def get_items_count():
 
 
 def get_likes_count(num):
-    token = 'set_your_token'
+    token = 'set_your_ssid'
     headers = {
             'content-type'  : 'application/json',
             'charset'       : 'utf-8',
@@ -184,6 +184,9 @@ def update_likes_led():
 
     prev_likes_count = likes_count
 
+def intr_handler_timer0(t):
+    update_likes_led()
+
 
 init_led()
 prev_likes_count = 0
@@ -196,7 +199,7 @@ if not wifi:
 update_likes_led()
 
 t0 = machine.Timer(0)
-t0.init(period=0xffff, mode=machine.Timer.PERIODIC, callback=update_likes_led)
+t0.init(period=900000, mode=machine.Timer.PERIODIC, callback=intr_handler_timer0)
 
 tp = machine.TouchPad(machine.Pin(13))
 while True:

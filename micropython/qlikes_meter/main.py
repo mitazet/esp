@@ -1,5 +1,5 @@
-SSID_NAME = "set_your_ssid"
-SSID_PASS = "set_your_pass"
+SSID_NAME = "aterm-ad4ad5-g"
+SSID_PASS = "71c85e183aef8"
 
 import utime
 import network
@@ -96,7 +96,7 @@ def set_led_level(level):
         pin19.value(1)
 
 def get_items_count():
-    token = 'set_your_token'
+    token = 'f99437b705ee6cb26b544b55995b0eade05f6bb5'
     headers = {
             'content-type'  : 'application/json',
             'charset'       : 'utf-8',
@@ -117,7 +117,7 @@ def get_items_count():
 
 
 def get_likes_count(num):
-    token = 'set_your_ssid'
+    token = 'f99437b705ee6cb26b544b55995b0eade05f6bb5'
     headers = {
             'content-type'  : 'application/json',
             'charset'       : 'utf-8',
@@ -186,7 +186,6 @@ def update_likes_led():
 
 def intr_handler_timer0(t):
     update_likes_led()
-
 
 init_led()
 prev_likes_count = 0

@@ -8,3 +8,5 @@ Micor Python Code for ESP32
 [Code for this article](https://qiita.com/mitazet/items/abeff4e2671bda763c2f)
 ### thermometer
 [Code for this article](https://qiita.com/mitazet/items/ea17c1df676cdac78d69)
+### decluttering_system
+[Code for this article](https://qiita.com/mitazet/items/984e6411de830383ba1f)
